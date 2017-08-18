@@ -5,6 +5,7 @@ import { RoleManager } from './assignment/RoleManager';
 import { ModLoader } from '../../lib/mod/ModLoader';
 import Database from '../../database/Database';
 
+const { dmManager } = require('yamdbf-dm-manager');
 const config: any = require('../../config.json');
 const credentials: any = require('../../database.json');
 const { once } = ListenerUtil;
@@ -38,7 +39,8 @@ export class SweeperClient extends Client {
 			],
 			readyText: 'Ready\u0007',
 			ratelimit: '10/1m',
-			pause: true
+			pause: true,
+			plugins: [dmManager(config.ServerData.botDMServerId)]
 		});
 
 		this.config = config;

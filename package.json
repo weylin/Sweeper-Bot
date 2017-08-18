@@ -33,7 +33,8 @@
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "sequelize": "^4.5.0",
-    "yamdbf": "github:zajrik/yamdbf"
+    "yamdbf": "github:zajrik/yamdbf",
+    "yamdbf-dm-manager": "github:zajrik/yamdbf-dm-manager"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.2",
