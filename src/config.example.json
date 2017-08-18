@@ -8,6 +8,7 @@
 		"assignmentChannelId": "Channel ID",
 		"serverId": "Server ID",
 		"modChannelId": "Channel ID",
-		"logChannelId": "Channel ID"
+		"logChannelId": "Channel ID",
+		"botDMServerId": "Seprate Server ID"
 	}
 }
