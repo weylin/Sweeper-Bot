@@ -201,4 +201,34 @@ export class Actions
 		return offenses;
 	}
 
+	// User Commands
+	// User Joins Server
+	public async userJoin(gmUser: GuildMember, guild: Guild): Promise<any>
+	{
+		let dateJoined = new Date(gmUser.joinedAt);
+		return this._client.database.commands.users.userJoin(gmUser.user.id, gmUser.user.tag, guild.id, dateJoined)
+			.then(function(result) {
+				return;
+			})
+			.catch(error => {
+				// Known error with PG version: https://github.com/sequelize/sequelize/issues/8043
+				// "TypeError: Cannot read property '0' of undefined"
+				this.logger.error('Users', `Error setting userJoin. Known error. Error: ${error}`);
+			});
+	}
+
+	// User Parts Server
+	public async userPart(gmUser: GuildMember, guild: Guild): Promise<any>
+	{
+		let dateParted = new Date();
+		return this._client.database.commands.users.userPart(gmUser.user.id, gmUser.user.tag, guild.id, dateParted)
+			.then(function(result) {
+				return;
+			})
+			.catch(error => {
+				// Known error with PG version: https://github.com/sequelize/sequelize/issues/8043
+				// "TypeError: Cannot read property '0' of undefined"
+				this.logger.error('Users', `Error setting userPart. Known error. Error: ${error}`);
+			});
+	}
 }

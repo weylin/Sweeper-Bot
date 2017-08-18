@@ -5,6 +5,7 @@ import MuteModel from '../models/Mute';
 import WarnModel from '../models/Warn';
 import NotesModel from '../models/Notes';
 import BanModel from '../models/Ban';
+import UsersModel from '../models/Users';
 
 export class MuteCommands extends Command {
 	public constructor(connection: any) {
@@ -124,5 +125,20 @@ export class BanCommands extends Command {
 		return this.model.create(
 			{ serverid, modid, userid, actiontype: 'Kick', note }
 		);
+	}
+}
+
+export class UsersCommands extends Command {
+	public constructor(connection: any) {
+		super();
+		this.model = new UsersModel(connection).get();
+	}
+
+	public userJoin(userID: string, userName: string, serverID: string, svrJoinDate: Date): Promise<void> {
+		return this.model.upsert({ userID, userName, serverID, svrJoinDate });
+	}
+
+	public userPart(userID: string, userName: string, serverID: string, svrPartDate: Date): Promise<void> {
+		return this.model.upsert({ userID, userName, serverID, svrPartDate });
 	}
 }

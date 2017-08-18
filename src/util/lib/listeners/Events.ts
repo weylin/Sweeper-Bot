@@ -203,6 +203,7 @@ export class Events {
 	@on('guildMemberRemove')
 	private async _onGuildMemberRemove(member: GuildMember, joined: boolean = false): Promise<void> {
 		this.logMember(member, joined);
+		this._client.mod.actions.userPart(member, member.guild);
 
 		if (!await this._client.mod.managers.mute.isMuted(member)) return;
 
@@ -213,6 +214,7 @@ export class Events {
 	@on('guildMemberAdd')
 	private async _onGuildMemberAdd(member: GuildMember, joined: boolean = true): Promise<void> {
 		this.logMember(member, joined);
+		this._client.mod.actions.userJoin(member, member.guild);
 
 		if (!await this._client.mod.managers.mute.isMuted(member)) return;
 		if (!await this._client.mod.managers.mute.isEvasionFlagged(member)) return;
