@@ -14,6 +14,10 @@ If you've noticed a bug or have a question that doesn't belong
 to see if someone else in the community has already created a ticket.
 If not, go ahead and [make one](https://github.com/r-DestinyTheGame/Sweeper-Bot/issues/new)!
 
+Feel free to ask for help either on here or
+[our discord](https://discord.gg/DestinyReddit) and tagging **@Bot Developer**;
+everyone is a beginner at first :smile_cat:
+
 ### 2. Fork & create a branch
 
 If this is something you think you can fix, then
@@ -44,9 +48,7 @@ see [this wiki](https://github.com/r-DestinyTheGame/Sweeper-Bot/wiki/Developer's
 
 ### 5. Implement your fix or feature
 
-At this point, you're ready to make your changes! Feel free to ask for help either
-on here or [our discord](https://discord.gg/DestinyReddit) and tagging **@Bot Developer**;
-everyone is a beginner at first :smile_cat:
+At this point, you're ready to make your changes! 
 
 ### 6. Testing your changes
 
