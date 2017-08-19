@@ -206,7 +206,7 @@ export class Actions
 	public async userJoin(gmUser: GuildMember, guild: Guild): Promise<any>
 	{
 		let dateJoined = new Date(gmUser.joinedAt);
-		return this._client.database.commands.users.userJoin(gmUser.user.id, gmUser.user.tag, guild.id, dateJoined)
+		return await this._client.database.commands.users.userJoin(gmUser.user.id, gmUser.user.tag, guild.id, dateJoined)
 			.then(function(result) {
 				return;
 			})

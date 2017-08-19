@@ -53,7 +53,7 @@ export default class Database extends Observer {
 			dialect: 'postgres',
 			logging: this.logging,
 			pool: {
-				max: 5,
+				max: 10,
 				min: 1,
 				idle: 10000
 			},
