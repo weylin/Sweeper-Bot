@@ -1,7 +1,7 @@
 import { GuildStorage, ListenerUtil } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, MessageReaction, Guild, GuildMember, Role, User, VoiceChannel } from 'discord.js';
 import { SweeperClient } from '../SweeperClient';
-import { MuteManager } from '../../../lib/mod/managers/MuteManager';
+import { MuteManager } from '../mod/managers/MuteManager';
 import Constants from '../../Constants';
 
 const config: any = require('../../../config.json');

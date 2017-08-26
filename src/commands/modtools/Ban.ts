@@ -6,7 +6,7 @@ import Constants from '../../util/Constants';
 import * as fuzzy from 'fuzzy';
 import { SweeperClient } from '../../util/lib/SweeperClient';
 
-import { prompt, PromptResult } from '../../lib/Util';
+import { prompt, PromptResult } from '../../util/lib/Util';
 
 const idRegex: RegExp = /^(?:<@!?)?(\d+)>?$/;
 

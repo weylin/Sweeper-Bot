@@ -1,7 +1,7 @@
 import { GuildStorage, Message } from 'yamdbf';
 import { GuildMember, Guild } from 'discord.js';
 import { MuteManager } from './managers/MuteManager';
-import { SweeperClient } from '../../util/lib/SweeperClient';
+import { SweeperClient } from '../SweeperClient';
 import { Actions } from './Actions';
 
 /**

@@ -1,6 +1,6 @@
 import { GuildStorage, KeyedStorage, Providers, Logger, logger } from 'yamdbf';
 import { GuildMember, Guild, Collection, Role } from 'discord.js';
-import { SweeperClient } from '../../../util/lib/SweeperClient';
+import { SweeperClient } from '../../SweeperClient';
 import { Timer } from '../../timer/Timer';
 const { JSONProvider } = Providers;
 

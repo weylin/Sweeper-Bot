@@ -1,6 +1,6 @@
 import { Message, MessageOptions } from 'discord.js';
 import { Command } from 'yamdbf';
-import { SweeperClient } from '../util/lib/SweeperClient';
+import { SweeperClient } from './SweeperClient';
 
 /**
  * Represents possible results of Util#prompt

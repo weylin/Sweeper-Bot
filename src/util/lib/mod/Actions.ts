@@ -1,7 +1,7 @@
 import { GuildMember, Guild, RichEmbed, User, TextChannel } from 'discord.js';
 import { GuildStorage, Logger, logger } from 'yamdbf';
-import { SweeperClient } from '../../util/lib/SweeperClient';
-import Constants from '../../util/Constants';
+import { SweeperClient } from '../SweeperClient';
+import Constants from '../../Constants';
 import * as moment from 'moment';
 
 /**

@@ -2,7 +2,7 @@ import { Client, ListenerUtil } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, Guild, GuildMember, VoiceChannel } from 'discord.js';
 import { Events } from './listeners/Events';
 import { RoleManager } from './assignment/RoleManager';
-import { ModLoader } from '../../lib/mod/ModLoader';
+import { ModLoader } from './mod/ModLoader';
 import Database from '../../database/Database';
 
 const { dmManager } = require('yamdbf-dm-manager');
