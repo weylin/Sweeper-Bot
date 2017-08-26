@@ -83,7 +83,8 @@ export default class Mute extends Command<SweeperClient> {
 			note = this.parseNote(args);
 			if (note.length === 0) {
 				note = 'Please be kind to each other and read our rules in #rules-and-info.';
-			} else if (note.toLowerCase() === 'clan') {
+			}
+			if (note.toLowerCase() === 'clan') {
 				note = 'Regarding your promotion in #clan-recruitment, please note that the channel rules ask that you be an active member of the server. Please interact with and get to know some of the other folks around here and participate in some discussions over the next few days, then feel free to post again once you\'re a bit more active.';
 			}
 
