@@ -2,7 +2,8 @@ import { Client, ListenerUtil } from 'yamdbf';
 import { TextChannel, RichEmbed, Message, Guild, GuildMember, VoiceChannel } from 'discord.js';
 import { Events } from './listeners/Events';
 import { RoleManager } from './assignment/RoleManager';
-import { ModLoader } from './mod/ModLoader';
+import { ModLoader } from '../lib/mod/ModLoader';
+import VoiceChannelManager from './voice/VoiceChannelManager';
 import Database from '../../database/Database';
 
 const { dmManager } = require('yamdbf-dm-manager');
@@ -17,6 +18,7 @@ export class SweeperClient extends Client {
 	public roleManager: RoleManager;
 	public database: Database;
 	public mod: ModLoader;
+	public voiceChannelManager: VoiceChannelManager;
 
 	// constructor
 	public constructor() {
@@ -47,6 +49,8 @@ export class SweeperClient extends Client {
 		this.events = new Events(this);
 		this.roleManager = new RoleManager(this);
 		this.database = new Database(credentials);
+		this.mod = new ModLoader(this);
+		this.voiceChannelManager = new VoiceChannelManager(this);
 	}
 
 	@once('pause')
@@ -58,10 +62,9 @@ export class SweeperClient extends Client {
 	@once('clientReady')
 	private async _onClientReady(): Promise<void>
 	{
-		this.mod = new ModLoader(this);
 		await this.mod.init();
-
 		await this.roleManager.init();
+		await this.voiceChannelManager.init();
 	}
 
 	@once('disconnect')

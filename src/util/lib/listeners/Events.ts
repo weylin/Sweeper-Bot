@@ -18,7 +18,15 @@ export class Events {
 
 	@on('voiceStateUpdate')
 	private async _onVoiceStateUpdate(oldMember: GuildMember, newMember: GuildMember): Promise<void> {
+		let makeChannel: boolean = false;
+		let channelCount: number = this._client.voiceChannelManager.getChannelCount(newMember.guild);
+		let emptyChannels: number = this._client.voiceChannelManager.getEmptyChannelCount(newMember.guild);
 
+		if (emptyChannels < 1)
+			makeChannel = true;
+
+		if ((newMember.voiceChannel !== undefined && newMember.voiceChannel.name.startsWith('Fireteam ')) && newMember.voiceChannelID !== null && makeChannel)
+			this._client.voiceChannelManager.createChannel(newMember);
 	}
 
 	@on('messageReactionAdd')

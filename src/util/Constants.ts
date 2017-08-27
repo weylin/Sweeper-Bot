@@ -6,6 +6,8 @@ export type BotConstants = {
 	serverId: string;
 	modChannelId: string;
 	logChannelId: string;
+	baseVoiceChannelIdOne: string;
+	baseVoiceChannelIdTwo: string;
 
 	// RegExp
 	platformRegExp: RegExp;
@@ -35,6 +37,8 @@ export type BotConstants = {
 	NMEmoji: string;
 
 	serverInvite: string;
+
+	channelNames: Array<string>;
 };
 
 // tslint:disable-next-line:variable-name
@@ -45,6 +49,8 @@ Constants.assignmentChannelId = config.ServerData.assignmentChannelId;
 Constants.serverId = config.ServerData.serverId;
 Constants.modChannelId = config.ServerData.modChannelId;
 Constants.logChannelId = config.ServerData.logChannelId;
+Constants.baseVoiceChannelIdOne = config.ServerData.baseVoiceChannelIdOne;
+Constants.baseVoiceChannelIdTwo = config.ServerData.baseVoiceChannelIdTwo;
 
 // RegExp
 Constants.platformRegExp = new RegExp('(\\bpc\\b)|(\\bpsn\\b)|(\\bps\\b)|(\\bxbl\\b)|(\\bxb\\b)|(\\bxbox\\b)', 'i');
@@ -73,5 +79,7 @@ Constants.FWCEmoji = '<:fwc:247889245337944064>';
 Constants.NMEmoji = '<:nm:247889245421699082>';
 
 Constants.serverInvite = 'https://discord.gg/XDfY2bV';
+
+Constants.channelNames = [ 'Sweeper Bot', 'Wei Ning', 'Mara Sov', 'Saint-14', 'Rasputin', 'Uldren Sov', 'Osiris', 'Eriana-3', 'Toland', 'Ana Bray', 'Dredgen Yor', 'Pahanin', 'Tevis', 'Xur', 'Cayde-6', 'Zavala', 'Ikora Rey', 'Kabr', 'Ghaul', 'Praedyth', 'Uldren', 'Vosik', 'Phogoth', 'Petra', 'Ascendant Raisins', 'Celery', 'Red Legion', 'Jolder', 'Rahool', 'Eris Morn', 'Ghost', 'Lord Shaxx', 'Kadi 55-30', 'Lord Saladin', 'The Speaker', 'Variks', 'Xander 99-40', 'Exo Stranger ', 'Charlemagne', 'Hawthorne', 'Cozmo-23', 'DeeJ', 'Ahamkara', 'Jaren Ward', 'Radegast', 'Timur', 'Gheleon', 'Efrideet', 'Brother Vance', 'Alak-Hul', 'Eris', 'Amanda Holliday', 'Dinklebot', 'Ralph the Chicken', 'The Traveler', 'Atheon', 'Crota', 'Oryx', 'Aksis', 'Skolas', 'Rahndel', 'Shiro-4', 'Hideo', 'Efrideet', 'Eva Levante', 'Lakshmi-2', 'Arach Jalaal' ];
 
 export default Constants;
