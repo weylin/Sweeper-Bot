@@ -8,6 +8,7 @@ export type BotConstants = {
 	logChannelId: string;
 	baseVoiceChannelIdOne: string;
 	baseVoiceChannelIdTwo: string;
+	baseVoiceChannelIdThree: string;
 
 	// RegExp
 	platformRegExp: RegExp;
@@ -51,6 +52,7 @@ Constants.modChannelId = config.ServerData.modChannelId;
 Constants.logChannelId = config.ServerData.logChannelId;
 Constants.baseVoiceChannelIdOne = config.ServerData.baseVoiceChannelIdOne;
 Constants.baseVoiceChannelIdTwo = config.ServerData.baseVoiceChannelIdTwo;
+Constants.baseVoiceChannelIdThree = config.ServerData.baseVoiceChannelIdThree;
 
 // RegExp
 Constants.platformRegExp = new RegExp('(\\bpc\\b)|(\\bpsn\\b)|(\\bps\\b)|(\\bxbl\\b)|(\\bxb\\b)|(\\bxbox\\b)', 'i');
