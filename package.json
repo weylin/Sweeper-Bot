@@ -33,7 +33,7 @@
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "sequelize": "^4.7.5",
-    "yamdbf": "github:zajrik/yamdbf",
+    "yamdbf": "3.0.1",
     "yamdbf-dm-manager": "github:zajrik/yamdbf-dm-manager"
   },
   "devDependencies": {
